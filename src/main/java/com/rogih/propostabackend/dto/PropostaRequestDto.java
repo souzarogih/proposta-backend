@@ -1,11 +1,10 @@
 package com.rogih.propostabackend.dto;
 
 import com.rogih.propostabackend.entity.Usuario;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class PropostaRequestDto {

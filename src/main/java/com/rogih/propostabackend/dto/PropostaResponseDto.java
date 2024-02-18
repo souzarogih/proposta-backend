@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PropostaResponseDto {
 
-    private Long Id;
+    private Long id;
 
     private String nome;
 
@@ -27,6 +27,8 @@ public class PropostaResponseDto {
     private int prazoPagamento;
 
     private boolean integrada;
+
+    private Boolean aprovada;
 
     private String observacao;
 
