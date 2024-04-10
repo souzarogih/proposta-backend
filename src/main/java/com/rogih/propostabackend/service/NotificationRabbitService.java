@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Log4j2
 @AllArgsConstructor
 @Service
-public class NotificationService {
+public class NotificationRabbitService {
 
     private RabbitTemplate rabbitTemplate;
 

@@ -27,7 +27,8 @@ public class PropostaController {
         return ResponseEntity.created(ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(responseDto.getId())
-                .toUri()).body(responseDto);
+                .toUri())
+                .body(responseDto);
     }
 
     @GetMapping

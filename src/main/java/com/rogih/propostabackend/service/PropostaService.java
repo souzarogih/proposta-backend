@@ -20,7 +20,7 @@ public class PropostaService {
     private PropostaRepository propostaRepository;
 
     @Autowired
-    private NotificationService notificationService;
+    private NotificationRabbitService notificationService;
 
     @Value("${rabbitmq.propostapendente.exchange}")
     private String exchange;
@@ -46,10 +46,7 @@ public class PropostaService {
             log.error("Erro ao notificar a proposta: {}", ex.getMessage());
             proposta.setIntegrada(false);
             propostaRepository.save(proposta);
-
         }
-
-
     }
 
     public List<PropostaResponseDto> obterProposta() {

@@ -23,5 +23,5 @@ public class PropostaRequestDto {
 
     private int prazoPagamento;
 
-    private Usuario usuario;
+//    private Usuario usuario;
 }

@@ -1,16 +1,21 @@
 package com.rogih.propostabackend.entity;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.io.Serializable;
+
+//@Data
+@Setter
+@Getter
+//@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "tb_proposta")
-public class Proposta {
+public class Proposta implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,6 +34,7 @@ public class Proposta {
 
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "id_usuario")
+    @JsonManagedReference
     private Usuario usuario;
 
 }
